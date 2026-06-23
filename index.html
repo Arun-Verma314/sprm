@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPRM - Seminar on Pure & Rigorous Mathematics</title>
-    <!-- Tailwind CSS Engine -->
-    <script src="https://tailwindcss.com"></script>
+    <!-- Tailwind CSS Styling Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- MathJax Configuration for Textbook-grade Equations -->
     <script>
         window.MathJax = {
@@ -15,35 +15,35 @@
     <script id="MathJax-script" async src="https://jsdelivr.net"></script>
     <style>
         .latex-font { font-family: 'Cambria', 'Georgia', serif; }
-        .academic-gradient { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a8a 100%); }
+        .academic-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e3a8a 100%); }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased font-sans">
+<body class="bg-slate-950 text-white antialiased font-sans">
 
     <!-- Header / Hero Dashboard Banner -->
-    <header class="academic-gradient border-b border-blue-900/50 shadow-2xl relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_45%)]"></div>
-        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+    <header class="academic-gradient border-b border-blue-900/80 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.12),transparent_45%)]"></div>
+        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-6">
                 <!-- Circular Logo Frame -->
-                <div class="w-24 h-24 bg-slate-900/80 rounded-full flex items-center justify-center border-2 border-amber-500/40 p-1.5 shrink-0 shadow-[0_0_25px_rgba(245,158,11,0.15)]">
+                <div class="w-24 h-24 bg-slate-900 rounded-full flex items-center justify-center border-2 border-amber-400 p-1.5 shrink-0 shadow-[0_0_25px_rgba(245,158,11,0.25)]">
                     <img src="logo.png" alt="SPRM Seal Logo" class="w-full h-full object-contain rounded-full">
                 </div>
                 <!-- Branding Titles -->
                 <div class="text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-3">
                         <h1 class="text-4xl font-black tracking-tight text-white">SPRM</h1>
-                        <span class="text-xs font-bold tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase">IIT Kanpur</span>
+                        <span class="text-xs font-bold tracking-widest bg-amber-400/20 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded-md uppercase">IIT Kanpur</span>
                     </div>
-                    <p class="text-xl mt-1 font-bold text-slate-200 tracking-wide">Seminar on Pure and Rigorous Mathematics</p>
-                    <p class="text-xs mt-1 text-blue-300 italic font-medium">A dedicated peer support model engineered for MSc junior survival</p>
+                    <p class="text-2xl mt-1 font-bold text-slate-100 tracking-wide">Seminar on Pure and Rigorous Mathematics</p>
+                    <p class="text-xs mt-1 text-blue-200 italic font-semibold">A dedicated peer support model engineered for MSc junior survival</p>
                 </div>
             </div>
             <!-- Mentor/Advisor Badge -->
-            <div class="bg-slate-900/60 border border-blue-800/40 px-5 py-3 rounded-xl text-center md:text-right shadow-lg backdrop-blur-sm shrink-0">
-                <span class="text-[9px] font-bold tracking-widest text-amber-400 uppercase block mb-0.5">Faculty Mentor</span>
-                <p class="text-sm font-bold text-white">Prof. P. Muthukumar</p>
-                <p class="text-xs text-slate-400">Dept. of Mathematics & Statistics</p>
+            <div class="bg-slate-900/90 border-2 border-blue-700 px-5 py-3 rounded-xl text-center md:text-right shadow-lg shrink-0">
+                <span class="text-[9px] font-black tracking-widest text-amber-400 uppercase block mb-0.5">Faculty Mentor</span>
+                <p class="text-sm font-black text-white">Prof. P. Muthukumar</p>
+                <p class="text-xs text-slate-300 font-medium">Dept. of Mathematics & Statistics</p>
             </div>
         </div>
     </header>
@@ -53,54 +53,36 @@
         
         <!-- Interactive Left Sidebar Module Controls -->
         <aside class="lg:col-span-1">
-            <div class="bg-slate-800/80 border border-slate-700/50 p-5 rounded-2xl shadow-xl backdrop-blur-md sticky top-6 space-y-4">
-                <h3 class="text-xs font-bold text-amber-400 uppercase tracking-widest">Workspace Core</h3>
+            <div class="bg-slate-900 border-2 border-slate-700 p-5 rounded-2xl shadow-xl sticky top-6 space-y-4">
+                <h3 class="text-xs font-black text-amber-400 uppercase tracking-widest border-b border-slate-800 pb-2">Workspace Navigation</h3>
                 
                 <nav class="space-y-2" id="sidebar-nav">
-                    <!-- Home/About Tab -->
-                    <button onclick="switchView('view-about', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-bold bg-blue-900 text-white rounded-xl transition text-left">
-                        📖 About the Initiative
+                    <!-- Home/About Button -->
+                    <button onclick="switchView('view-home', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black bg-blue-800 text-white rounded-xl transition text-left shadow-md border-l-4 border-amber-400">
+                        🏠 Home / About Portal
                     </button>
                     
-                    <!-- Real Analysis Dropdown Wrapper -->
+                    <!-- Notes Folder Accordion Button -->
                     <div class="space-y-1">
-                        <button onclick="toggleDropdownMenu('menu-ra')" class="w-full flex items-center justify-between px-4 py-2.5 text-sm font-bold text-blue-400 bg-blue-950/40 border border-blue-900/30 rounded-xl transition">
-                            <span>📊 Real Analysis I</span>
-                            <svg class="h-4 w-4 fill-current text-blue-400" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                        <button onclick="toggleDropdownMenu('folder-notes')" class="w-full flex items-center justify-between px-4 py-2.5 text-sm font-black text-white bg-slate-800 border border-slate-700 rounded-xl transition">
+                            <span class="flex items-center gap-2">📂 Lecture Notes</span>
+                            <svg class="h-4 w-4 fill-current text-amber-400" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                         </button>
-                        <div id="menu-ra" class="pl-3 space-y-1 text-xs">
-                            <button onclick="switchView('view-ra', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Sequences & Series</button>
-                            <button onclick="switchView('view-ra', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Limits & Continuity</button>
-                            <button onclick="switchView('view-ra', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Differentiation</button>
-                            <button onclick="switchView('view-ra', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Metric Spaces Basic</button>
-                            <button onclick="switchView('view-ra', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Compactness & Connectedness</button>
+                        
+                        <!-- Collapsible Subject Submenu (Hidden Initially) -->
+                        <div id="folder-notes" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-slate-700 bg-slate-950/50 rounded-lg p-1">
+                            <button onclick="switchView('view-real-analysis', this)" class="w-full text-left px-3 py-2 text-xs font-bold text-yellow-300 hover:text-white hover:bg-blue-900 rounded-lg transition">📊 Real Analysis I</button>
+                            <button onclick="switchView('view-linear-algebra', this)" class="w-full text-left px-3 py-2 text-xs font-bold text-purple-300 hover:text-white hover:bg-purple-900 rounded-lg transition">📐 Linear Algebra</button>
                         </div>
                     </div>
 
-                    <!-- Linear Algebra Dropdown Wrapper -->
-                    <div class="space-y-1">
-                        <button onclick="toggleDropdownMenu('menu-la')" class="w-full flex items-center justify-between px-4 py-2.5 text-sm font-bold text-purple-400 bg-purple-950/40 border border-purple-900/30 rounded-xl transition">
-                            <span>📐 Linear Algebra</span>
-                            <svg class="h-4 w-4 fill-current text-purple-400" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                        </button>
-                        <div id="menu-la" class="hidden pl-3 space-y-1 text-xs">
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Vector Spaces Basics</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Linear Transformations</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Dual Spaces</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Diagonalizability</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Inner Product Spaces</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Operators & Spectral Theorem</button>
-                            <button onclick="switchView('view-la', this)" class="w-full text-left px-3 py-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/30 transition">✦ Bilinear & Multilinear Maps</button>
-                        </div>
-                    </div>
-
-                    <!-- Library Tab -->
-                    <button onclick="switchView('view-library', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-xl transition text-left">
-                        📚 Book Reference Library
+                    <!-- Library Reference Link -->
+                    <button onclick="switchView('view-library', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
+                        📚 E-Book Reference Library
                     </button>
-                    <!-- Feedback Tab -->
-                    <button onclick="switchView('view-suggestions', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-xl transition text-left">
-                        💬 Feedback Desk
+                    <!-- Suggestion Box Link -->
+                    <button onclick="switchView('view-suggestions', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
+                        💬 Anonymous Request Desk
                     </button>
                 </nav>
             </div>
@@ -109,12 +91,40 @@
         <!-- Dynamic Content Engine Space -->
         <section class="lg:col-span-3">
             
-            <!-- PANEL 1: ABOUT THE INITIATIVE -->
-            <div id="view-about" class="view-panel bg-slate-800/60 border border-slate-700/60 p-7 rounded-2xl shadow-xl space-y-6">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight border-b border-slate-700 pb-3 flex items-center gap-3">
-                    <span>📝</span> Mission & Origin Blueprint
+            <!-- VIEW 1: HOME PORTAL & FOUNDATION BLUEPRINT (Visible by default) -->
+            <div id="view-home" class="view-panel bg-slate-900 border-2 border-slate-800 p-7 rounded-2xl shadow-xl space-y-6">
+                <h2 class="text-2xl font-black text-white tracking-tight border-b border-slate-800 pb-3 flex items-center gap-3">
+                    <span class="text-amber-400">📖</span> Mission Statement & Origin History
                 </h2>
-                <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                <div class="space-y-4 text-slate-200 text-sm leading-relaxed">
                     <p>
-                        Welcome to the official repository of the <strong>Seminar on Pure and Rigorous Mathematics (SPRM)</strong>. This framework is a student-led initiative designed from the ground up by senior MSc Mathematics scholars at <strong>IIT Kanpur</strong> to solve an immediate, repeating cultural bottleneck: surviving the sheer transition shock of your first semester.
+                        Welcome to the official digital hub of the <strong>Seminar on Pure and Rigorous Mathematics (SPRM)</strong>. This workspace is a student-led repository engineered from scratch by senior MSc Mathematics scholars at <strong>IIT Kanpur</strong> to solve an immediate, structural hurdle: mastering postgraduate mathematical abstraction without losing confidence.
                     </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+                        <div class="bg-slate-950 p-5 rounded-xl border-2 border-slate-800">
+                            <h4 class="text-amber-400 font-black text-sm uppercase tracking-wider mb-2">Why I Initiated SPRM</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                                As an MSc Mathematics candidate currently navigating the intense workload of our department, I saw that arriving juniors are frequently blind-sided by the jump from undergraduate calculation to abstract analysis. Textbooks print final, clean steps while hiding the discovery process. This seminar is explicitly dedicated to exposing that hidden scratch work.
+                            </p>
+                        </div>
+                        <div class="bg-slate-950 p-5 rounded-xl border-2 border-slate-800">
+                            <h4 class="text-blue-400 font-black text-sm uppercase tracking-wider mb-2">Faculty Mentorship</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-medium">
+                                Formulated and run under the active guidance and logistical support of <strong>Prof. P. Muthukumar</strong>, SPRM acts as an academic bridge. Prof. Muthukumar’s dedication to teaching clarity has allowed us to turn these peer review logs into an active, helpful departmental resource.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-xs font-bold text-yellow-300 bg-slate-950 p-4 rounded-lg border-l-4 border-amber-500 italic shadow-inner">
+                        💡 Select a category folder from the left workspace sidebar navigation menu to load specific modular course materials, lecture archives, and reference files.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VIEW 2: REAL ANALYSIS INTERFACE (Isolated Content View) -->
+            <div id="view-real-analysis" class="view-panel hidden space-y-6">
+                <div class="border-b-2 border-blue-900 pb-3">
+                    <h2 class="text-2xl font-black text-white tracking-tight flex items-center gap-3">
+                        <span class="text-blue-400">■</span> Real Analysis I Resources
+                    </h2>
+                    <!-- Subsection Internal Tracker Tabs -->
+                    <div class="flex flex-wrap gap-2 mt-3 text-xs font-black">
