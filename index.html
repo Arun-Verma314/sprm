@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPRM - IIT Kanpur Mathematics</title>
+    <!-- Tailwind CSS for modern, clean layout -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- MathJax for rendering pure LaTeX equations on screen -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+    <style>
+        .latex-font { font-family: 'Cambria', 'Georgia', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-blue-900 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-6 py-12 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight">SPRM</h1>
+            <p class="text-xl mt-2 text-blue-200 font-medium">Seminar on Pure and Rigorous Mathematics</p>
+            <p class="text-md mt-1 text-blue-300 italic">An IITK student-led peer support initiative to master abstract mathematics</p>
+            <div class="mt-4 text-xs bg-blue-800 inline-block px-3 py-1 rounded-full text-blue-100">
+                Mentored by Prof. P. Muthukumar | Dept. of Mathematics & Statistics, IIT Kanpur
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="md:col-span-1">
+            <div class="sticky top-6 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Course Modules</h3>
+                <nav class="space-y-1">
+                    <a href="#real-analysis" class="block px-3 py-2 text-sm font-medium text-blue-700 bg-blue-50 rounded-md">Real Analysis I</a>
+                    <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-md transition">Linear Algebra (MSc)</a>
+                    <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-md transition">Topology / Algebra</a>
+                </nav>
+                <hr class="my-4 border-gray-200">
+                <div class="text-xs text-gray-500 leading-relaxed">
+                    Designed to help juniors transition smoothly into abstract mathematics.
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <section class="md:col-span-3 space-y-12">
+            
+            <!-- Category Header -->
+            <div id="real-analysis">
+                <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2">Real Analysis I Notes</h2>
+                <p class="text-sm text-gray-600 mt-1">Foundational insights, proofs, and intuitive deconstructions.</p>
+            </div>
+
+            <!-- Lecture Entry Card -->
+            <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold uppercase bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">Lecture 01</span>
+                    <span class="text-xs text-gray-400 font-medium">Topic: Sequences</span>
+                </div>
+                
+                <h3 class="text-xl font-bold text-gray-900 hover:text-blue-900 transition">
+                    The Rigorous Limit of a Sequence: Intuition vs. Rigour
+                </h3>
+                
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    An introduction detailing why mathematical intuition alone fails to guarantee sequence limits. Features the "Foggy Road" structural analogy to decode the formal $\epsilon$-$K$ definition.
+                </p>
+
+                <!-- Embedded Interactive Math Snippet -->
+                <div class="bg-gray-50 p-4 rounded border-l-4 border-blue-900 latex-font text-sm space-y-2">
+                    <p class="font-semibold text-xs text-blue-900 uppercase tracking-wider">Core Definition Recap:</p>
+                    <p>A sequence $(a_n)$ converges to $L \in \mathbb{R}$ if for every $\epsilon > 0$, there exists $K \in \mathbb{N}$ such that for all $n \geq K$:</p>
+                    <p class="text-center font-bold font-mono text-base my-2">$$|a_n - L| < \epsilon$$</p>
+                </div>
+
+                <!-- Download/View Quick Actions -->
+                <div class="flex items-center space-x-4 pt-2">
+                    <a href="notes/lecture01.pdf" class="inline-flex items-center justify-center text-xs font-semibold bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded shadow transition">
+                        📥 Download Notes (.pdf)
+                    </a>
+                    <a href="notes/lecture01.tex" class="inline-flex items-center justify-center text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded transition">
+                        📄 View Raw LaTeX (.tex)
+                    </a>
+                </div>
+            </article>
+
+            <!-- Placeholder for Lecture 2 -->
+            <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 opacity-60 border-dashed">
+                <h3 class="text-md font-bold text-gray-500">Lecture 02: Algebraic Limit Laws & Cauchy Sequences</h3>
+                <p class="text-xs text-gray-400 mt-1">Notes will be uploaded following the upcoming SPRM review session.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Minimalist Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 mt-20 text-center text-xs border-t border-gray-800">
+        <p>&copy; 2026 SPRM Initiative | Department of Mathematics, IIT Kanpur.</p>
+        <p class="mt-1 text-gray-600">Created by MSc Mathematics Seniors to support incoming batches.</p>
+    </footer>
+
+</body>
+</html>
