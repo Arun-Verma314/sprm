@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPRM - Seminar on Pure & Rigorous Mathematics</title>
     <!-- Tailwind CSS Styling Engine -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://tailwindcss.com"></script>
     <!-- MathJax Configuration for Textbook-grade Equations -->
     <script>
         window.MathJax = {
@@ -58,7 +58,7 @@
                 
                 <nav class="space-y-2" id="sidebar-nav">
                     <!-- Home/About Button -->
-                    <button onclick="switchView('view-home', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black bg-blue-800 text-white rounded-xl transition text-left shadow-md border-l-4 border-amber-400">
+                    <button id="btn-home" onclick="switchView('view-home', 'btn-home')" class="nav-btn w-full flex items-center px-4 py-2.5 text-sm font-black bg-blue-800 text-white rounded-xl transition text-left shadow-md border-l-4 border-amber-400">
                         🏠 Home / About Portal
                     </button>
                     
@@ -71,17 +71,17 @@
                         
                         <!-- Collapsible Subject Submenu (Hidden Initially) -->
                         <div id="folder-notes" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-slate-700 bg-slate-950/50 rounded-lg p-1">
-                            <button onclick="switchView('view-real-analysis', this)" class="w-full text-left px-3 py-2 text-xs font-bold text-yellow-300 hover:text-white hover:bg-blue-900 rounded-lg transition">📊 Real Analysis I</button>
-                            <button onclick="switchView('view-linear-algebra', this)" class="w-full text-left px-3 py-2 text-xs font-bold text-purple-300 hover:text-white hover:bg-purple-900 rounded-lg transition">📐 Linear Algebra</button>
+                            <button id="btn-ra" onclick="switchView('view-real-analysis', 'btn-ra')" class="sub-nav-btn w-full text-left px-3 py-2 text-xs font-bold text-yellow-300 hover:text-white hover:bg-blue-900 rounded-lg transition">📊 Real Analysis I</button>
+                            <button id="btn-la" onclick="switchView('view-linear-algebra', 'btn-la')" class="sub-nav-btn w-full text-left px-3 py-2 text-xs font-bold text-purple-300 hover:text-white hover:bg-purple-900 rounded-lg transition">📐 Linear Algebra</button>
                         </div>
                     </div>
 
                     <!-- Library Reference Link -->
-                    <button onclick="switchView('view-library', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
+                    <button id="btn-library" onclick="switchView('view-library', 'btn-library')" class="nav-btn w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
                         📚 E-Book Reference Library
                     </button>
                     <!-- Suggestion Box Link -->
-                    <button onclick="switchView('view-suggestions', this)" class="w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
+                    <button id="btn-suggestions" onclick="switchView('view-suggestions', 'btn-suggestions')" class="nav-btn w-full flex items-center px-4 py-2.5 text-sm font-black text-slate-100 hover:text-white hover:bg-slate-800 rounded-xl transition text-left border border-slate-800">
                         💬 Anonymous Request Desk
                     </button>
                 </nav>
@@ -127,4 +127,3 @@
                         <span class="text-blue-400">■</span> Real Analysis I Resources
                     </h2>
                     <!-- Subsection Internal Tracker Tabs -->
-                    <div class="flex flex-wrap gap-2 mt-3 text-xs font-black">
